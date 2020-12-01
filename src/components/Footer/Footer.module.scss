@@ -1,0 +1,311 @@
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 30px 20px 30px;
+}
+
+.footer {
+  background-color: #696969;
+  width: 100%;
+}
+
+.footerTopWrap {
+  display: flex;
+  padding-top: 35px;
+  border-bottom: 1px solid #757575;
+}
+
+.mainCol {
+  width: 575px;
+  margin-right: 115px;
+}
+
+.mainColFooter {
+  @extend .mainCol;
+  display: flex;
+  align-items: center;
+}
+
+.footerCol {
+  width: 33.3%;
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.colListWrap {
+  display: flex;
+  flex: 1;
+}
+
+.listHeader {
+  font-size: 20px;
+  font-weight: normal;
+  color: #cbcbcb;
+  border-bottom: 1px solid #7a7a7a;
+  text-align: left;
+  padding-bottom: 15px;
+}
+
+.listHeaderTitle {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ff8900;
+  white-space: nowrap;
+}
+
+.subHeader {
+  margin-top: 35px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.subHeaderLight {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  color: #cbcbcb;
+}
+
+.subHeaderBold {
+  @extend .subHeaderLight;
+  color: #fff;
+  margin-top: 15px;
+}
+
+.inputEmail {
+  background-color: #f5f5f5;
+  height: 50px;
+  padding: 0 30px;
+  outline: none;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+.subscribeBtn {
+  transition: all .3s;
+  cursor: pointer;
+  height: 50px;
+  outline: none;
+  border: none;
+  background-color: #ff8900;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0 30px;
+
+  &:hover {
+    background-color: #e57b00;
+  }
+}
+
+.formWrap {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.linksList {
+  margin-top: 30px;
+  text-align: left;
+  padding: 0;
+
+  li {
+    list-style: none;
+    margin-bottom: 24px;
+
+    a {
+      transition: all .3s;
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      border-bottom: 2px solid #a1a1a1;
+    }
+
+    &:hover a {
+      border-bottom: 2px solid #fff;
+    }
+  }
+}
+
+.footerBottomIn {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.footerLogo {
+  display: block;
+  width: 195px;
+  height: 37px;
+}
+
+.socialMediaWrap {
+  display: flex;
+  padding: 0;
+
+  li {
+    list-style: none;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .socialMediaBlockWrap {
+    transition: all .3s;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #7b8092;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    &:hover {
+      border: 1px solid #ff8900;
+    }
+  }
+}
+
+.license {
+  color: #a0a9b2;
+  border-left: 1px solid #787878;
+  padding: 10px 16px;
+  margin-left: 20px;
+  font-size: 12px;
+}
+
+.companyLogo {
+  display: block;
+  width: 43px;
+  height: 16px;
+}
+
+.companyInfo {
+  text-align: left;
+  border-left: 1px solid #787878;
+  padding-left: 16px;
+  margin-left: 16px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.servicesProvided {
+  color: #a0a9b2;
+  font-size: 14px;
+  margin-bottom: 11px;
+}
+
+.companyName {
+  @extend .servicesProvided;
+  margin-bottom: 0;
+  text-decoration: none;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+.footerBottomColWrap {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexWrap {
+  display: flex;
+  align-items: center;
+}
+
+.contentWrap {
+  padding: 20px;
+  width: 320px;
+  background-color: #fff;
+}
+
+.numberTitle {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ff8500;
+  text-align: center;
+}
+
+.close {
+  transition: all .3s;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  width: 15px;
+  top: 0;
+  color: #929292;
+
+  &:hover {
+    color: #838383;
+  }
+}
+
+.socialMediaWrapMob {
+  @extend .socialMediaWrap;
+  display: none;
+}
+
+//mobile-version
+
+@media (max-width: 1326px) {
+  .mainCol {
+    margin-right: 25px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .footerTopWrap {
+    flex-direction: column;
+  }
+  .mainCol {
+    width: 100%;
+    margin-right: 0;
+  }
+  .socialMediaWrapMob {
+    display: flex;
+  }
+  .displayNone {
+    display: none;
+  }
+  .footerLogo {
+    width: 100px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .listHeader {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .license {
+    padding: 10px;
+    margin-left: 10px;
+  }
+  .footerLogo {
+    width: 60px;
+    height: 15px;
+  }
+  .formWrap {
+    flex-direction: column;
+  }
+  .container {
+    padding: 0 15px 25px 15px;
+  }
+  .footerCol {
+    margin-right: 10px;
+  }
+  .formWrap {
+    margin-bottom: 30px;
+  }
+  .socialMediaWrapMob {
+    margin-bottom: 40px;
+  }
+}
+
